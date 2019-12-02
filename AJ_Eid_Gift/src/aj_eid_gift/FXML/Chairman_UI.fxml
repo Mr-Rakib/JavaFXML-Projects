@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="chairmanUI" maxHeight="600.0" maxWidth="900.0" minHeight="600.0" minWidth="900.0" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aj_eid_gift.Chairman_UIController">
+   <children>
+      <Label alignment="CENTER" minHeight="45.0" minWidth="750.0" style="-fx-background-color: #000022;" text="SOUTHEAST UNIVERSITY" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <VBox layoutX="539.0" layoutY="45.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="45.0">
+         <children>
+            <Label fx:id="chairmanName" prefHeight="8.0" prefWidth="150.0" text="Md. Rakibul Hasan">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="chairmanID" prefHeight="3.0" prefWidth="151.0" text="2016000000009">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <ImageView fitHeight="15.0" fitWidth="20.0" layoutX="513.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="220.0" AnchorPane.topAnchor="50.0">
+         <image>
+            <Image url="@../../images/login.jpeg" />
+         </image>
+      </ImageView>
+      <Button blendMode="MULTIPLY" layoutX="689.0" layoutY="47.0" mnemonicParsing="false" onAction="#handleLogoutAction" prefHeight="20.0" prefWidth="60.0" style="-fx-background-color: #F48555;" text="Log Out" textFill="#9a0000" AnchorPane.rightAnchor="1.0" />
+      <Label fx:id="mainNoticText" alignment="CENTER" layoutX="2.0" layoutY="44.0" prefHeight="30.0" prefWidth="511.0" text="No notice available" textFill="#097c1a" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="44.0" />
+      <TabPane layoutY="75.0" prefHeight="525.0" prefWidth="750.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="75.0">
+        <tabs>
+          <Tab text="Home">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="96.0" layoutY="40.0" text="Dashboard">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <GridPane alignment="CENTER" layoutX="14.0" layoutY="121.0" prefHeight="151.0" prefWidth="233.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="417.0" minWidth="10.0" prefWidth="380.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <HBox>
+                                 <children>
+                                    <Label blendMode="MULTIPLY" contentDisplay="CENTER" minHeight="50.0" minWidth="200.0" style="-fx-background-color: #48DDA6; -fx-border-radius: 3;" text="Total Student" textFill="#002803">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="totalStudent" alignment="CENTER" blendMode="MULTIPLY" maxHeight="50.0" maxWidth="30.0" minHeight="50.0" minWidth="30.0" prefHeight="50.0" prefWidth="30.0" style="-fx-background-color: #48DDA6; -fx-border-radius: 3;" text="2">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="50.0" prefWidth="322.0" GridPane.rowIndex="1">
+                                 <children>
+                                    <Label blendMode="MULTIPLY" contentDisplay="CENTER" minHeight="50.0" minWidth="200.0" style="-fx-background-color: #D7CAFD; -fx-border-radius: 3;" text="Total Faculty" textFill="#0a0000">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="totalFaculty" alignment="CENTER" blendMode="MULTIPLY" maxHeight="50.0" maxWidth="30.0" minHeight="50.0" minWidth="30.0" prefHeight="50.0" prefWidth="30.0" style="-fx-background-color: #D7CAFD; -fx-border-radius: 3;" text="2" textAlignment="CENTER" textFill="#0a0000">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox GridPane.rowIndex="2">
+                                 <children>
+                                    <Label blendMode="MULTIPLY" contentDisplay="CENTER" minHeight="50.0" minWidth="200.0" style="-fx-background-color: #293E6D; -fx-border-radius: 3;" text="Register Student" textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="totalregisteredStudent" alignment="CENTER" blendMode="MULTIPLY" maxHeight="50.0" maxWidth="30.0" minHeight="50.0" minWidth="30.0" prefHeight="50.0" prefWidth="30.0" style="-fx-background-color: #293E6D; -fx-border-radius: 3;" text="2" textAlignment="CENTER" textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </GridPane>
+                        <Label alignment="CENTER" blendMode="MULTIPLY" layoutX="257.0" prefHeight="17.0" prefWidth="493.0" text="Registered Students and Advisors" AnchorPane.leftAnchor="260.0" />
+                        <TableView fx:id="permissionTable" layoutX="298.0" layoutY="72.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0">
+                          <columns>
+                            <TableColumn fx:id="col_per_id" prefWidth="91.0" text="Student ID " />
+                            <TableColumn fx:id="col_per_code" prefWidth="86.0" text="Course Code" />
+                              <TableColumn fx:id="col_per_faculty" prefWidth="74.0" text="Faculty" />
+                              <TableColumn fx:id="col_per_topic" prefWidth="117.0" text="Topic" />
+                              <TableColumn fx:id="col_per_group" prefWidth="79.0" text="Group Name" />
+                              <TableColumn fx:id="col_per_status" prefWidth="122.0" text="Status" />
+                              <TableColumn fx:id="col_per_permission" prefWidth="68.0" text="Permission" />
+                          </columns>
+                        </TableView>
+                        <ToolBar layoutX="50.0" layoutY="73.0" prefHeight="35.0" prefWidth="230.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="70.0">
+                           <items>
+                              <TextField fx:id="permissionTableSearchField" onKeyTyped="#permissionTableSearchTypeAction" prefHeight="25.0" prefWidth="216.0" />
+                           </items>
+                        </ToolBar>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Confirmation">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ToolBar layoutX="108.0" layoutY="8.0" prefHeight="35.0" prefWidth="320.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <items>
+                              <TextField fx:id="searchAcceptedStudentField" onKeyTyped="#searchAcceptedStudentFieldTypeAction" prefHeight="25.0" prefWidth="306.0" promptText="Search By Student ID" />
+                           </items>
+                        </ToolBar>
+                        <Label alignment="CENTER" layoutX="18.0" layoutY="58.0" prefHeight="15.0" prefWidth="320.0" text="Register Group &amp; Advisor List Confirmation" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="60.0" />
+                        <TableView fx:id="acceptedStudentTable" layoutX="370.0" layoutY="47.0" onMouseClicked="#selectAcceptedStudentSelectAction" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="320.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <columns>
+                              <TableColumn fx:id="col_acp_id" prefWidth="92.0" text="Student ID " />
+                              <TableColumn fx:id="col_acp_code" prefWidth="84.0" text="Course Code" />
+                              <TableColumn fx:id="col_acp_faculty" prefWidth="91.0" text="Faculty" />
+                              <TableColumn fx:id="col_acp_topic" prefWidth="129.0" text="Topic" />
+                              <TableColumn fx:id="col_acp_group" prefWidth="86.0" text="Group Name" />
+                              <TableColumn fx:id="col_acp_status" prefWidth="96.0" text="Status" />
+                           </columns>
+                        </TableView>
+                        <GridPane layoutX="67.0" layoutY="140.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="120.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="124.0" minWidth="10.0" prefWidth="75.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="177.0" minWidth="10.0" prefWidth="160.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label text="Name" />
+                              <Label text="ID" GridPane.rowIndex="1" />
+                              <Label text="Group Name" GridPane.rowIndex="3" />
+                              <Label text="Supervisor" GridPane.rowIndex="4" />
+                              <Label text="Topic" GridPane.rowIndex="5" />
+                              <TextField fx:id="studentName" disable="true" editable="false" GridPane.columnIndex="1" />
+                              <TextField fx:id="studentID" disable="true" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="groupName" disable="true" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <TextField fx:id="supervisor" disable="true" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <TextField fx:id="topic" disable="true" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <TilePane GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#AcceptPermissionAction" text="Accept" />
+                                    <Button mnemonicParsing="false" onAction="#clearAction" text="Cancel" />
+                                 </children>
+                              </TilePane>
+                              <Label text="Course Code" GridPane.rowIndex="2" />
+                              <TextField fx:id="courseCode" disable="true" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                           </children>
+                        </GridPane>
+                        <Label fx:id="permissionlabel" alignment="CENTER" layoutX="124.0" layoutY="360.0" prefWidth="300.0" textFill="#00da3a" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="350.0">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="permissionlabelerr" alignment="CENTER" layoutX="20.0" layoutY="377.0" prefHeight="15.0" prefWidth="300.0" textFill="#d91300" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="370.0">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Registration ">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Separator prefWidth="750.0" />
+                        <ToolBar layoutX="166.0" layoutY="19.0" prefHeight="35.0" prefWidth="320.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <items>
+                              <TextField fx:id="serchRegisteredStudentField" onKeyTyped="#serchRegisteredStudentTypeFieldAction" prefHeight="25.0" prefWidth="305.0" style="-fx-background-radius: 30;" />
+                           </items>
+                        </ToolBar>
+                        <Label alignment="CENTER" layoutX="358.0" layoutY="6.0" prefHeight="35.0" prefWidth="406.0" text="Register Students  list" AnchorPane.leftAnchor="320.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <GridPane alignment="CENTER" layoutX="-45.0" layoutY="49.0" prefHeight="250.0" prefWidth="320.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="50.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="286.0" minWidth="10.0" prefWidth="80.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="417.0" minWidth="10.0" prefWidth="200.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <TextField fx:id="req_studentGroup" minHeight="30.0" minWidth="150.0" prefHeight="30.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <ComboBox fx:id="req_studentCourse" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="req_studentTopic" minHeight="30.0" minWidth="150.0" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <ComboBox fx:id="req_studentFaculty" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <HBox GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#handelApplyandConfirmAction" text="Apply &amp; Confirm" />
+                                    <Button mnemonicParsing="false" onAction="#handelResetAction" text="Reset" />
+                                 </children>
+                              </HBox>
+                              <Label text="Course Code" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Instructor" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Group Name" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Research Topic " GridPane.rowIndex="4">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="req_studentName" disable="true" editable="false" minHeight="30.0" minWidth="150.0" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="1" />
+                              <Label text="Name">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="req_studentID" disable="true" editable="false" minHeight="30.0" minWidth="150.0" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label text="ID" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets left="20.0" right="20.0" />
+                           </padding>
+                        </GridPane>
+                        <TableView fx:id="RegisterStudentTable" layoutX="510.0" layoutY="35.0" onMouseClicked="#RegisterStudentTableClickAction" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="320.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="35.0">
+                           <columns>
+                              <TableColumn fx:id="col_reg_id" prefWidth="92.0" text="Student ID " />
+                              <TableColumn fx:id="col_reg_code" prefWidth="84.0" text="Course Code" />
+                              <TableColumn fx:id="col_reg_faculty" prefWidth="91.0" text="Faculty" />
+                              <TableColumn fx:id="col_reg_topic" prefWidth="129.0" text="Topic" />
+                              <TableColumn fx:id="col_reg_group" prefWidth="86.0" text="Group Name" />
+                              <TableColumn fx:id="col_reg_status" prefWidth="96.0" text="Status" />
+                           </columns>
+                        </TableView>
+                        <Label fx:id="permissionLabel" alignment="CENTER" layoutX="146.0" layoutY="352.0" prefHeight="17.0" prefWidth="310.0" textFill="#14da1e" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="350.0" />
+                        <Label fx:id="permissionLabelerr" alignment="CENTER" layoutX="40.0" layoutY="375.0" maxWidth="310.0" minWidth="310.0" prefWidth="310.0" textFill="RED" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="370.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Status">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="473.0" prefWidth="750.0" style="-fx-background-color: #111;">
+                     <children>
+                        <Label alignment="CENTER" layoutX="5.0" layoutY="57.0" prefHeight="17.0" prefWidth="330.0" style="-fx-background-color: #111;" text="Techers Avavilability" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="60.0" />
+                        <GridPane layoutX="40.0" layoutY="101.0" prefHeight="138.0" prefWidth="252.0" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="100.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="121.0" minWidth="10.0" prefWidth="93.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="159.0" minWidth="10.0" prefWidth="159.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Name" textFill="#eeeeee" />
+                              <Label text="Teacher's ID " textFill="#eeeeee" GridPane.rowIndex="1" />
+                              <Label text="Student Limit" textFill="#eeeeee" GridPane.rowIndex="2" />
+                              <TextField fx:id="facultyName" alignment="CENTER" disable="true" editable="false" GridPane.columnIndex="1" />
+                              <TextField fx:id="facultyID" alignment="CENTER" disable="true" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="facultyStudentLimit" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <HBox GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#handelSaveFcultyAction" style="-fx-background-color: #333;" text="Save" textFill="#16a159" />
+                                    <Button mnemonicParsing="false" onAction="#ResetAllFacultyInfoAction" style="-fx-background-color: #333;" text="Clear" textFill="#a8a6ae" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </GridPane>
+                        <ToolBar blendMode="LIGHTEN" layoutX="2.0" layoutY="284.0" prefHeight="34.0" prefWidth="330.0" style="-fx-background-color: #222;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="300.0">
+                           <items>
+                              <Label text="Registration Last Date " textFill="#e1e1e1" />
+                              <DatePicker fx:id="registrationDatePiker" prefHeight="25.0" prefWidth="125.0" style="-fx-background-color: #333;" />
+                              <Button mnemonicParsing="false" onAction="#handelRegistrationLastDateAction" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: #111;" text="Set" textFill="WHITE" />
+                           </items>
+                        </ToolBar>
+                        <ToolBar layoutX="5.0" layoutY="10.0" prefHeight="35.0" prefWidth="320.0" style="-fx-background-color: #333; -fx-background-radius: 10;" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="10.0">
+                           <items>
+                              <TextField fx:id="searchFaculty" onKeyTyped="#searchFacultyTypeAcion" prefHeight="25.0" prefWidth="249.0" style="-fx-background-radius: 20;" />
+                              <Button mnemonicParsing="false" style="-fx-background-color: #333;" text="Search" textFill="WHITE" />
+                           </items>
+                        </ToolBar>
+                        <TableView fx:id="facultyListTable" layoutX="475.0" layoutY="69.0" onMouseClicked="#selectFacultyAction" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="330.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="col_facultyID" prefWidth="75.0" text="Faculty ID" />
+                            <TableColumn fx:id="col_facultyName" prefWidth="101.0" text="Faculty Name" />
+                              <TableColumn fx:id="col_facultyDepartment" prefWidth="101.0" text="Department" />
+                              <TableColumn fx:id="col_facultyLimit" prefWidth="101.0" text="Maximum Limit" />
+                          </columns>
+                        </TableView>
+                        <Label fx:id="facultyLabel" alignment="CENTER" layoutX="108.0" layoutY="257.0" maxWidth="330.0" minWidth="330.0" prefWidth="330.0" textFill="#04e462" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="240.0" />
+                        <Label fx:id="facultyLabelerr" alignment="CENTER" layoutX="14.0" layoutY="283.0" maxWidth="330.0" minWidth="330.0" prefWidth="330.0" textFill="#e30505" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="260.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

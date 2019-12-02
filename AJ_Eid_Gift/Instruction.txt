@@ -1,0 +1,44 @@
+ 		Instructions
+===================================================================================
+
+1. first import the file name projectdb
+2. run the main 
+3. for login to the ui use the 'user_login' table
+
+---------------
+Student UI
+tab  1 -> Show the status if the student get permition 'YES' from the Chairman
+tab  2 -> Also Register for Course (Specially CSE4000) with on time .
+
+--------------
+Techer UI
+tab  1 -> Show the all register student 
+tab  2 -> Show all the register student of the (USER) loged faculty
+		He/ She Can accept(with in time) or reject the student reacher's request
+tab  3 -> Show the status of accepted student also with the chairman permission  
+		
+
+---------------
+Chairman UI
+tab  1 -> Show the all permited students  for research 
+		permission should granted YES from chairman
+tab  2 -> Show all the student which are accepted from faculty
+		Here Chairman Can confirm the request and it will apear as permission = 'YES' 
+tab  3 -> Show all the student which are  not accepted from faculty
+		Here Chairman Can edit the information and provide permission 
+tab  4 -> Show all the faculties available student limit 
+		Here Chairman can change the limit of the faculty
+
+---------------
+
+Note : For the very first time i just provid the requested registered students
+	You may add more student update the student_login
+
+
+
+
+Thanks for reading
+"Allah Hafez" 
+ 
+
++++++++++++---------------------------------------------+++++++++++
